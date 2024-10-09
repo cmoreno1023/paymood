@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\views\\paymodeview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\paymodeview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\presenters\\paymodepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\presenters\\paymodepresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\paymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\views\\paymodeview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|solutionrelative:supermarket-mvp\\views\\paymodeview.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B0B41191-D2F6-433B-8159-E1B9D6AB62CF}|Supermarket-mvp\\Supermarket-mvp.csproj|c:\\users\\cmore\\onedrive\\desktop\\camilo\\tura id\\pdfs t\\romo\\supermarket-mvp\\supermarket-mvp\\views\\ipaymodeview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,19 +51,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PayModePresenter.cs",
+              "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\PayModePresenter.cs",
+              "RelativeDocumentMoniker": "Supermarket-mvp\\Presenters\\PayModePresenter.cs",
+              "ToolTip": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Presenters\\PayModePresenter.cs",
+              "RelativeToolTip": "Supermarket-mvp\\Presenters\\PayModePresenter.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T19:49:11.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Program.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Program.cs",
               "ToolTip": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Program.cs",
               "RelativeToolTip": "Supermarket-mvp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T19:42:45.199Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PayModeView.Designer.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\PayModeView.Designer.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Views\\PayModeView.Designer.cs",
@@ -67,35 +84,37 @@
               "RelativeToolTip": "Supermarket-mvp\\Views\\PayModeView.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T16:01:28.013Z"
+              "WhenOpened": "2024-10-08T16:01:28.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "PayModeView.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\PayModeView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Views\\PayModeView.cs",
               "ToolTip": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\PayModeView.cs",
               "RelativeToolTip": "Supermarket-mvp\\Views\\PayModeView.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T15:55:21.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PayModeView.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\PayModeView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Views\\PayModeView.cs",
               "ToolTip": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\PayModeView.cs [Dise\u00F1o]",
               "RelativeToolTip": "Supermarket-mvp\\Views\\PayModeView.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T22:03:30.665Z"
+              "WhenOpened": "2024-10-07T22:03:30.665Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IPayModeView.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Views\\IPayModeView.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Views\\IPayModeView.cs",
@@ -107,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IPayModeRepository.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Models\\IPayModeRepository.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Models\\IPayModeRepository.cs",
@@ -119,7 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "PayModeModel.cs",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Models\\PayModeModel.cs",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Models\\PayModeModel.cs",
@@ -131,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Supermarket-mvp.csproj",
               "DocumentMoniker": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
               "RelativeDocumentMoniker": "Supermarket-mvp\\Supermarket-mvp.csproj",
