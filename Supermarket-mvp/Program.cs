@@ -1,3 +1,7 @@
+using Supermarket_mvp._Repositories;
+using Supermarket_mvp.Models;
+using Supermarket_mvp.Presenters;
+using Supermarket_mvp.Properties;
 using Supermarket_mvp.Views;
 
 
@@ -14,7 +18,13 @@ namespace Supermarket_mvp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            string sqlConnectionString = Settings.Default.SqlConnection;
+            IPayModeView view = new PayModeView();
+            IPayModeRepository repository = new PayModeRepository(sqlConnectionString);
             Application.Run(new PayModeView());
+            IPayModeRepository Repository = new PayModeRepository(sqlConnectionString);
+            new PayModePresenter(view, repository);
+            Application.Run((Form)view);
         }
     }
 }
