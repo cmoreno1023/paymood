@@ -124,6 +124,7 @@
             tabPageModeDetail.TabIndex = 1;
             tabPageModeDetail.Text = "Pay Mode Detail";
             tabPageModeDetail.UseVisualStyleBackColor = true;
+            tabPageModeDetail.Click += tabPageModeDetail_Click;
             // 
             // BtnCancel
             // 
@@ -260,6 +261,7 @@
             // 
             DgPayMode.AllowUserToAddRows = false;
             DgPayMode.AllowUserToDeleteRows = false;
+            DgPayMode.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             DgPayMode.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DgPayMode.Location = new Point(17, 80);
             DgPayMode.Name = "DgPayMode";

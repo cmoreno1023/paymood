@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket_mvp.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -11,12 +12,12 @@ using System.Windows.Forms;
 
 namespace Supermarket_mvp.Views
 {
-    public partial class PayModeView : Form , IPayModeView
+    public partial class PayModeView : Form, IPayModeView
     {
-        public string PayModeId 
-        { 
+        public string PayModeId
+        {
             get { return TxtPayModeId.Text; }
-            set { TxtPayModeId.Text = value;}
+            set { TxtPayModeId.Text = value; }
         }
         public string PayModeName
         {
@@ -145,7 +146,35 @@ namespace Supermarket_mvp.Views
 
         public void SetPayModeListBildingSource(BindingSource payModelList)
         {
-            DgPayMode. DataSource = payModelList;
+            DgPayMode.DataSource = payModelList;
+        }
+        
+        private void tabPageModeDetail_Click(object sender, EventArgs e)
+        {
+
+        }
+        private static PayModeView instance;
+
+        public static PayModeView GetInstance()
+        {
+        
+            if  (instance == null || instance.IsDisposed)
+            {
+                instance = new PayModeView();
+
+            }
+
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                {
+                    instance.WindowState = FormWindowState.Normal;
+
+                }
+                instance.BringToFront();
+            }
+               return instance;
         }
     }
 }
+
