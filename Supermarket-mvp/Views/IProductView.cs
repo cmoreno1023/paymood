@@ -8,13 +8,29 @@ namespace Supermarket_mvp.Views
 {
     public interface IProductView
     {
+        // Propiedades para los campos de la vista
+        string ProductId { get; set; }
+        string ProductName { get; set; }
+        string CategoryId { get; set; }
+        string Price { get; set; }
         string SearchValue { get; set; }
-        bool IsEdit { get; set; }
-        bool IsSuccessful { get; set; }
-        string Message { get; set; }
+        Action<object, EventArgs> SaveProduct { get; set; }
+        Action<object, EventArgs> CancelEvent { get; set; }
+
+        bool GetIsEdit();
+        void SetIsEdit(bool value);
+        bool GetIsSuccessful();
+        void SetIsSuccessful(bool value);
+        string GetMessage();
+        void SetMessage(string value);
+        void SetProductList(BindingSource productList);
+        void ShowMessage(string v);
+
         event EventHandler SearchEvent;
         event EventHandler AddNewEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;
+
+        
     }
 }

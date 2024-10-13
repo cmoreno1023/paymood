@@ -7,20 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Supermarket_mvp.Views;
+using System;
+using Supermarket_mvp.Repositories;
+using Supermarket_mvp.Presenters;
 
 namespace Supermarket_mvp.Views
 {
-    public partial class ProductView : Form IProductView
+    public partial class ProductView : Form, IProductView
+
+      
     {
         public string SearchValue { get => TxtSearch.Text; set => TxtSearch.Text = value; }
-        public bool IsEdit { get; set; }
-        public bool IsSuccessful { get; set; }
-        public string Message { get; set; }
+
+        private bool isEdit;
+
+        public bool GetIsEdit()
+        {
+            return isEdit;
+        }
+
+        public void SetIsEdit(bool value)
+        {
+            isEdit = value;
+        }
+
+        private bool isSuccessful;
+
+        public bool GetIsSuccessful()
+        {
+            return isSuccessful;
+        }
+
+        public void SetIsSuccessful(bool value)
+        {
+            isSuccessful = value;
+        }
+
+        private string message;
+
+        public string GetMessage()
+        {
+            return message;
+        }
+
+        public void SetMessage(string value)
+        {
+            message = value;
+        }
+
         public ProductView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvents();
 
+            IProductRepository productRepository = new ProductRepository();
+
+            // Crear una instancia del presentador
+            Presenters = new ProductPresenter(this, productRepository);
         }
 
         private void AssociateAndRaiseViewEvents()
@@ -31,11 +75,44 @@ namespace Supermarket_mvp.Views
             BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
             BtnClose.Click += delegate { this.Close(); }; ;
         }
+        public string ProductId
+        {
+            get => TxtProductId.Text;
+            set => TxtProductId.Text = value;
+        }
+        public string ProductName
+        {
+            get => TxtProductName.Text;
+            set => TxtProductName.Text = value;
 
+        }
+
+        public string CategoryId
+        {
+            get => txtCategoryId.Text;
+            set => txtCategoryId.Text = value;
+        }
+
+        public string Price
+        {
+            get => TxtPrice.Text;
+            set => TxtPrice.Text = value;
+        }
+
+        public bool IsEdit { get; set; }
+        public bool IsSuccessful { get; set; }
+        public string Message { get; set; }
+        public Action<object, EventArgs> SaveProduct { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        Action<object, EventArgs> IProductView.CancelEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        internal ProductPresenter Presenters { get; }
+
+        // Eventos definidos en IProductView
         public event EventHandler SearchEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
+        public event EventHandler SaveProductEvent; // Evento para guardar el producto
+        public event EventHandler CancelEvent; // Evento para cancelar
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -65,6 +142,15 @@ namespace Supermarket_mvp.Views
         private void btnSave_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetProductList(BindingSource productList)
+        {
+            DgProduct.DataSource = productList;
+        }
+        public void ShowMessage(string message)
+        {
+            MessageBox.Show(message);
         }
     }
 }
