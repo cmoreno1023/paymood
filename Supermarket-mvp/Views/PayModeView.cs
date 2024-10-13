@@ -1,4 +1,5 @@
-﻿using Supermarket_mvp.Views;
+﻿using Supermarket_mvp.Models;
+using Supermarket_mvp.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace Supermarket_mvp.Views
 {
     public partial class PayModeView : Form, IPayModeView
     {
+      
         public string PayModeId
         {
             get { return TxtPayModeId.Text; }
@@ -50,6 +52,8 @@ namespace Supermarket_mvp.Views
             set { Message = value; }
         }
 
+        PayModeModel IPayModeView.SelectedPayMode => throw new NotImplementedException();
+
         public PayModeView()
         {
             InitializeComponent();
@@ -72,6 +76,11 @@ namespace Supermarket_mvp.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            BtnNew.Click += delegate { AddNewEvent?.Invoke(this, EventArgs.Empty); };
+            BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
+            BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
+            BtnSave.Click += delegate { SaveEvent?.Invoke(this, EventArgs.Empty); };
+            BtnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
         }
 
         public event EventHandler SearchEvent;
@@ -182,9 +191,17 @@ namespace Supermarket_mvp.Views
                return instance;
         }
 
-        
-        
+        public void ShowDetailPanel()
+        {
+            throw new NotImplementedException();
         }
+
+        public void HideDetailPanel()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     }
 
 

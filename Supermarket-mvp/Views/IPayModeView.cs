@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Supermarket_mvp.Models;
+using System;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using System.Linq;
@@ -13,6 +14,8 @@ namespace Supermarket_mvp.Views
         string PayModeName { get; set; }
         string PayModeObservation { get; set; }
 
+        PayModeModel SelectedPayMode { get; }
+
         string SearchValue { get; set; }
         bool IsEdit { get; set; }
         bool IsSuccessful { get; set; }
@@ -24,8 +27,12 @@ namespace Supermarket_mvp.Views
         event EventHandler DeleteEvent;
         event EventHandler SaveEvent;
         event EventHandler CancelEvent;
+        void ShowDetailPanel();
 
+        void HideDetailPanel();
         void SetPayModeListBildingSource(BindingSource payModelList);
         void Show();
+
+       
     }
 }

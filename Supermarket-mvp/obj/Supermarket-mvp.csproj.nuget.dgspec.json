@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
+    "C:\\Users\\cmore\\Desktop\\ExamenRomo\\paymood\\Supermarket-mvp\\Supermarket-mvp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj": {
+    "C:\\Users\\cmore\\Desktop\\ExamenRomo\\paymood\\Supermarket-mvp\\Supermarket-mvp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectUniqueName": "C:\\Users\\cmore\\Desktop\\ExamenRomo\\paymood\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "projectName": "Supermarket-mvp",
-        "projectPath": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\Supermarket-mvp.csproj",
+        "projectPath": "C:\\Users\\cmore\\Desktop\\ExamenRomo\\paymood\\Supermarket-mvp\\Supermarket-mvp.csproj",
         "packagesPath": "C:\\Users\\cmore\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmore\\OneDrive\\Desktop\\CAMILO\\TURA ID\\PDFS T\\ROMO\\Supermarket-mvp\\Supermarket-mvp\\obj\\",
+        "outputPath": "C:\\Users\\cmore\\Desktop\\ExamenRomo\\paymood\\Supermarket-mvp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\cmore\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.2, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [
@@ -69,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

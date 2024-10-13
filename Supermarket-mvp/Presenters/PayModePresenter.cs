@@ -36,6 +36,14 @@ namespace Supermarket_mvp.Presenters
 
             this.view.Show();
 
+            LoadAllPayModes();
+
+        }
+
+        private void LoadAllPayModes()
+        {
+            var payModeList = Repository.GetAll(); ;
+            payModeBindinSource.DataSource = payModeList;
         }
 
         private void loadAllPayModelList()
@@ -47,27 +55,75 @@ namespace Supermarket_mvp.Presenters
 
         private void CancelAction(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.HideDetailPanel(); 
         }
 
         private void SavePayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var payMode = new PayModeModel
+            {
+                Id = Convert.ToInt32(view.PayModeId),
+                Name = view.PayModeName,
+                observation = view.PayModeObservation
+            };
+
+            try
+            {
+                if (view.IsEdit)  // Si estamos editando
+                {
+                    Repository.Edit(payMode);  // Editar el modo de pago existente
+                    view.Message = "Modo de pago actualizado correctamente.";
+                }
+                else  // Si estamos agregando
+                {
+                    Repository.Add(payMode);  // Agregar un nuevo modo de pago
+                    view.Message = "Modo de pago agregado correctamente.";
+                }
+
+                view.IsSuccessful = true;
+                LoadAllPayModes();  // Recargar la lista
+                view.HideDetailPanel();  // Ocultar panel de detalles
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = "Error al guardar el modo de pago.";
+            };
         }
 
         private void DeleteSelectPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var payMode = (PayModeModel)view.SelectedPayMode; 
+                Repository.Delete(payMode.Id);  
+                view.IsSuccessful = true;
+                view.Message = "Modo de pago eliminado correctamente.";
+                LoadAllPayModes();  
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = "Error al eliminar el modo de pago.";
+            }
         }
 
         private void LoadSelectPayModeToEdit(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var payMode = (PayModeModel)view.SelectedPayMode;
+
+            view.PayModeId = payMode.Id.ToString();
+            view.PayModeName = payMode.Name;
+            view.PayModeObservation = payMode.observation;
+
+            view.IsEdit = true;  // Indica que estamos en modo edición
+            view.ShowDetailPanel();  
         }
 
         private void AddNewPayMode(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEdit = false;
+            view.ShowDetailPanel();
         }
 
         private void SearchPayMode(object? sender, EventArgs e)
