@@ -31,6 +31,7 @@ namespace Supermarket_mvp.Repositories
                 .Where(p => p.ProductName.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase))
                 .ToList();
         }
+
         public ProductModel GetById(int id)
         {
             return products.FirstOrDefault(p => p.ProductId == id);
@@ -38,31 +39,41 @@ namespace Supermarket_mvp.Repositories
 
         public void Add(ProductModel product)
         {
+            product.ProductId = products.Max(p => p.ProductId) + 1; // Asigna un nuevo ID
             products.Add(product);
 
 
         }
         public void Update(ProductModel product)
         {
-            var existingProduct = GetById(product.ProductId);
+            var existingProduct = products.FirstOrDefault(p => p.ProductId == product.ProductId);
             if (existingProduct != null)
             {
-
                 existingProduct.ProductName = product.ProductName;
                 existingProduct.CategoryId = product.CategoryId;
                 existingProduct.Price = product.Price;
             }
         }
-        public void Delete(int id)
+
+        public IEnumerable<ProductModel> GetAll()
         {
-            var product = GetById(id);
-            if (product != null)
-            {
-                products.Remove(product);
-            }
+            throw new NotImplementedException();
         }
 
-        IEnumerable<ProductModel> IProductRepository.GetAll()
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public void Delete(int ProductId)
+        {
+            var product = product.FirstOrDefault(p => p.ProductId == productId);
+            if (product != null)
+            {
+                product.Remove(product); // Elimina el producto de la lista
+            }
+        }
+        public IEnumerable<ProductModel> IProductRepository.GetAll()
         {
             throw new NotImplementedException();
         }
@@ -79,8 +90,10 @@ namespace Supermarket_mvp.Repositories
 
         void IProductRepository.Update(ProductModel product)
         {
-            throw new NotImplementedException();
-        }
+        return product
+             .Where(p => p.ProductName.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase))
+             .ToList();
+    }
 
         void IProductRepository.Delete(int id)
         {

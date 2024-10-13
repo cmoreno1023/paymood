@@ -21,6 +21,11 @@ namespace Supermarket_mvp.Models
 
         [Required]
         public decimal Price { get; set; }
+
+        internal object Where(Func<object, bool> value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
