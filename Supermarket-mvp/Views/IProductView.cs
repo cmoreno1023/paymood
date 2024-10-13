@@ -13,9 +13,13 @@ namespace Supermarket_mvp.Views
         string ProductName { get; set; }
         string CategoryId { get; set; }
         string Price { get; set; }
-        string SearchValue { get; set; }
+
+        string GetSearchValue();
+        void SetSearchValue(string value);
+
         Action<object, EventArgs> SaveProduct { get; set; }
         Action<object, EventArgs> CancelEvent { get; set; }
+        bool IsEdit { get; set; }
 
         bool GetIsEdit();
         void SetIsEdit(bool value);

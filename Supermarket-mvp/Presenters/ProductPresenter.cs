@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Supermarket_mvp.Models;
 using Supermarket_mvp.Views;
-using Supermarket_mvp.Repositories;
+using Supermarket_mvp._Repositories;
 using System.Runtime.ConstrainedExecution;
 
 namespace Supermarket_mvp.Presenters
@@ -45,8 +45,14 @@ namespace Supermarket_mvp.Presenters
         // Métodos para manejar los eventos
         private void AddProduct(object sender, EventArgs e)
         {
+            view.ProductId = "0"; // Establece el ID en "0" para indicar que es un nuevo producto
+            view.ProductName = ""; // Limpia el campo de nombre
+            view.CategoryId = ""; // Limpia el campo de categoría
+            view.Price = ""; // Limpia el campo de precio
+            view.IsEdit = false;
             view.ProductId = "0"; // Setea el ID en 0 cuando es un producto nuevo
             view.ShowMessage("Enter the new product details.");
+
         }
 
         private void EditProduct(object sender, EventArgs e)
@@ -83,6 +89,7 @@ namespace Supermarket_mvp.Presenters
             LoadAllProducts();
             view.ShowMessage("Product saved successfully.");
         }
+        
 
         private void Cancel(object sender, EventArgs e)
         {
@@ -95,10 +102,25 @@ namespace Supermarket_mvp.Presenters
 
     public interface IProductRepository
     {
+        object view { get; }
+
         void Add(ProductModel product);
         void Delete(int productId);
         IEnumerable<ProductModel> GetAll();
         void Update(ProductModel product);
+        private void SearchProducts(object sender, EventArgs e)
+        {
+            var searchTerm = view.SearchValue; // Esto debe coincidir con la propiedad en IProductView
+            var results = Repository.SearchProducts(searchTerm);
+
+            view.SetProductList(new BindingSource { DataSource = results.ToList() });
+
+            if (!results.Any())
+            {
+                view.ShowMessage("No se encontraron productos.");
+            }
+        }
+    }
     }
 }
 

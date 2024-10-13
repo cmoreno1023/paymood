@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Supermarket_mvp.Views;
 using System;
-using Supermarket_mvp.Repositories;
+using Supermarket_mvp._Repositories;
 using Supermarket_mvp.Presenters;
+using System.Windows.Forms;
+using System.ComponentModel;
+
 
 namespace Supermarket_mvp.Views
 {
@@ -18,7 +21,15 @@ namespace Supermarket_mvp.Views
 
       
     {
-        public string SearchValue { get => TxtSearch.Text; set => TxtSearch.Text = value; }
+        public string GetSearchValue()
+        {
+            return TxtSearch.Text;
+        }
+
+        public void SetSearchValue(string value)
+        {
+            TxtSearch.Text = value;
+        }
 
         private bool isEdit;
 
@@ -61,7 +72,7 @@ namespace Supermarket_mvp.Views
             InitializeComponent();
             AssociateAndRaiseViewEvents();
 
-            IProductRepository productRepository = new ProductRepository();
+            Presenters.IProductRepository productRepository = new ProductRepository();
 
             // Crear una instancia del presentador
             Presenters = new ProductPresenter(this, productRepository);
@@ -74,7 +85,11 @@ namespace Supermarket_mvp.Views
             BtnEdit.Click += delegate { EditEvent?.Invoke(this, EventArgs.Empty); };
             BtnDelete.Click += delegate { DeleteEvent?.Invoke(this, EventArgs.Empty); };
             BtnClose.Click += delegate { this.Close(); }; ;
-        }
+
+
+            BtnSave.Click += delegate { SaveProductEvent?.Invoke(this, EventArgs.Empty); }; // Asegúrate de que BtnSave está definido
+            btnCancel.Click += delegate { CancelEvent?.Invoke(this, EventArgs.Empty); };
+
         public string ProductId
         {
             get => TxtProductId.Text;
@@ -98,13 +113,18 @@ namespace Supermarket_mvp.Views
             get => TxtPrice.Text;
             set => TxtPrice.Text = value;
         }
-
+        public string SearchValue
+        {
+            get => TxtSearch.Text; // Asegúrate de que TxtSearch es el nombre correcto de tu TextBox
+            set => TxtSearch.Text = value;
+        }
         public bool IsEdit { get; set; }
         public bool IsSuccessful { get; set; }
         public string Message { get; set; }
         public Action<object, EventArgs> SaveProduct { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         Action<object, EventArgs> IProductView.CancelEvent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         internal ProductPresenter Presenters { get; }
+        public object BtnSave { get; private set; }
 
         // Eventos definidos en IProductView
         public event EventHandler SearchEvent;
